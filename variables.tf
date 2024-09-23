@@ -1,3 +1,4 @@
+# optional , default value is t3.micro, user can always override
 variable "instance_type" {
   default = "t3.micro"
   type    = string
@@ -8,10 +9,12 @@ variable "instance_type" {
   }
 
 }
+# mandatory user should supply
 variable "ami_id" {
-
+  default = "ami-09c813fb71547fc4f"
   type = string
 }
+# mandatory user should supply
 variable "vpc_security_group_ids" {
 
   type = list(string)
